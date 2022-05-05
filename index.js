@@ -1,26 +1,34 @@
-function Conta() {
-  this.saldo = 0;
-  this.nome = 'Bitu';
-  this.sacar = function (valor) {
-    if (this.saldo <= 0) return 'Tu ta pobre';
-    if (valor > this.saldo) return 'Tu não tem grana pra isso';
+function Conta(id) {
+  let saldo = 0;
+  const id = id;
 
-    this.saldo -= valor;
-    return this.saldo;
+  this.sacar = function (valor) {
+    if (saldo <= 0) return 'Tu ta pobre';
+    if (valor > saldo) return 'Tu não tem grana pra isso';
+
+    saldo -= valor;
+    return saldo;
   }
+
   this.depositar = function (valor) {
-    this.saldo += valor;
-    return this.saldo;
+    saldo += valor;
+    return saldo;
   }
+
   this.consultarSaldo = function () {
-    return this.saldo;
+    return saldo;
+  }
+
+  this.transferir = function(id, valor) {
+
   }
 
   return {
     sacar: this.sacar,
     depositar: this.depositar,
-    consultarSaldo: this.consultarSaldo
+    consultarSaldo: this.consultarSaldo,
   }
 }
+
 
 module.exports = Conta;
