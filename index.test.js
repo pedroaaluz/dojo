@@ -1,23 +1,7 @@
-const conta = {
-  saldo: 0,
-  nome: 'Bitu',
-  sacar: function (valor) {
-    if (this.saldo <= 0) return 'Tu ta pobre';
-    if (valor > this.saldo) return 'Tu não tem grana pra isso';
+const Conta = require('./index');
 
-    this.saldo -= valor;
-
-    return this.saldo;
-  },
-  depositar: function (valor) {
-    this.saldo += valor;
-
-    return this.saldo;
-  },
-  consultarSaldo: function () {
-    return this.saldo;
-  },
-};
+const conta = new Conta();
+console.log(conta.consultarSaldo());
 
 describe('Testando metodos da conta : ', () => {
   const valorSacado = 50;
@@ -38,7 +22,6 @@ describe('Testando metodos da conta : ', () => {
   });
 
   it('Deveria retornar o saldo apos deposito', () => {
-   
     const saldo = conta.consultarSaldo();
     const result = conta.depositar(valorDepositado);
 
