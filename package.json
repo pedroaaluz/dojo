@@ -1,0 +1,23 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroaaluz/dojo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedroaaluz/dojo/issues"
+  },
+  "homepage": "https://github.com/pedroaaluz/dojo#readme",
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
+}
