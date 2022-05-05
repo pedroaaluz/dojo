@@ -1,6 +1,5 @@
-function Conta(id) {
+function Conta() {
   let saldo = 0;
-  const id = id;
 
   this.sacar = function (valor) {
     if (saldo <= 0) return 'Tu ta pobre';
@@ -17,10 +16,6 @@ function Conta(id) {
 
   this.consultarSaldo = function () {
     return saldo;
-  }
-
-  this.transferir = function(id, valor) {
-
   }
 
   return {

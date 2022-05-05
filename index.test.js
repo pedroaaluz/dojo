@@ -1,7 +1,6 @@
 const Conta = require('./index');
 
 const conta = new Conta();
-console.log(conta.consultarSaldo());
 
 describe('Testando metodos da conta : ', () => {
   const valorSacado = 50;
@@ -47,5 +46,4 @@ describe('Testando metodos da conta : ', () => {
     expect(saldo).toBe(valorDepositado - valorSacado);
   });
 
-  it('')
 });
