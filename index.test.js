@@ -15,17 +15,20 @@ const conta = {
 
     return this.saldo
   },
-  consultarSaldo: () => (this.saldo),
+  consultarSaldo: function(){
+      return this.saldo
+  }
   
 }
 
 
 describe('Test teste : ', () => {
   
-  it('Teste de deposito', () => {
+  it('Deveria retornar o saldo em 0', () => {
+    const valorInicial = 0;
+    const result = conta.consultarSaldo();
 
-    const result = 
-
+    expect(result).toBe(valorInicial);
   })
 
 })
